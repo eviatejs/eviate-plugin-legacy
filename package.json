@@ -1,5 +1,5 @@
 {
-  "name": "@eviate/plugin",
+  "name": "eviate-plugin",
   "version": "0.1.0-alpha.4",
   "description": "Plugin system for EviateJS",
   "main": "dist/index.js",
