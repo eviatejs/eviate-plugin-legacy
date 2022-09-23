@@ -1,8 +1,9 @@
-import { Context } from "eviate";
+import type { Context } from "eviate";
 
 export const route = {
   name: "GET",
-  run: (ctx:Context) => {
+
+  run: (ctx: Context) => {
     return {}
   }
 }

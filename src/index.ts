@@ -1,1 +1,3 @@
-export {fileMiddleware} from "./interfaces/fileMiddleware";
+export { Plugin } from './plugin';
+
+export type { FileMiddleware } from './plugins/interfaces/file-middleware';
