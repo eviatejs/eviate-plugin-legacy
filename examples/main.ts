@@ -1,24 +1,33 @@
 import { Engine } from 'eviate';
-import { FileSystem } from '../src/fileSystem/fileSystemPlugin';
+
+import { FileSystemRouter } from '../src/plugins/file-system-router';
+
 const app: Engine = new Engine();
-const fileRouter = new FileSystem(
-  {
-    middlewareDir: 'examples/middle',
-    routerDir: 'example/routes',
-    log: false
-  },
-  { title: 'base', description: 'base', version: '0.0.1' }
-);
+const fileRouter = new FileSystemRouter({
+  middlewareDir: '/examples/middle',
+  routerDir: '/examples/routes',
+  log: false
+});
 
 fileRouter.middlewares(app);
-app.get('/', ctx => {
+fileRouter.routes(app);
+app.get('/', _ => {
   return {
     status: 200,
     text: 'Hello World',
     headers: {
-      //place holder i forgot the utf header and i dont wanna google
+      // place holder i forgot the utf header and i dont wanna google
     }
   };
 });
 
+app.get('/:name', ctx => {
+  return {
+    status: 200,
+    text: ctx.params.name,
+    headers: {
+      // place holder i forgot the utf header and i dont wanna google
+    }
+  };
+});
 app.listen({ port: 3000 });

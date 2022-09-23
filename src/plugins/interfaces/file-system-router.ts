@@ -1,4 +1,4 @@
-export interface FileSystemInterface {
+export interface FileSystemMiddlewareInterface {
   middlewareDir: string;
   routerDir: string;
   log?: boolean;
