@@ -1,0 +1,56 @@
+{
+  "name": "@eviate/plugin",
+  "version": "0.1.0-alpha.1",
+  "description": "Plugin system for EviateJS",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "run": "bun run src/index.ts",
+    "dev": "bun run examples/main.ts",
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write ./**/*.{ts,json,md}",
+    "release": "bumpp --commit --push --tag && npm publish",
+    "prepublishOnly": "bun run build",
+    "test": "bun wiptest",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "event-emitter": "^0.3.5",
+    "gradient-string": "^2.0.2",
+    "zod": "^3.19.1"
+  },
+  "devDependencies": {
+    "@types/event-emitter": "^0.3.3",
+    "@types/gradient-string": "^1.1.2",
+    "bumpp": "^8.2.1",
+    "bun-types": "^0.1.11",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "tsup": "^6.2.3",
+    "typescript": "^4.8.3"
+  },
+  "keywords": [],
+  "author": "EviateJS team",
+  "license": "MIT",
+  "homepage": "https://github.com/eviatejs/eviate-plugin",
+  "bugs": {
+    "url": "https://github.com/eviatejs/eviate-plugin/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eviatejs/eviate-plugin.git"
+  }
+}
