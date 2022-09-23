@@ -1,3 +1,3 @@
 export interface pluginSettings {
-    loadOnce: boolean
+  loadOnce: boolean;
 }

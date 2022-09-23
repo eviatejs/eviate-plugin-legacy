@@ -1,5 +1,5 @@
 export interface FileSystemInterface {
-    middlewareDir: string,
-    routerDir: string,
-    log?: boolean
+  middlewareDir: string;
+  routerDir: string;
+  log?: boolean;
 }

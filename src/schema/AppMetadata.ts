@@ -6,5 +6,4 @@ const AppMetadataSchema = z.object({
   version: z.string().default('1.0.0')
 });
 
-
 export type AppMetadata = z.output<typeof AppMetadataSchema>;
