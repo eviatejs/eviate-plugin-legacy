@@ -1,7 +1,7 @@
 import { Context, EviateMiddlewareResponse } from 'eviate';
-
-export const event = {
-  name: 'messageCreate',
+import { fileMiddleware } from '../../src';
+export const middleware = {
+  name: 'logger',
   run: (ctx: Context): EviateMiddlewareResponse => {
     console.log(ctx.path);
     return {

@@ -1,1 +1,1 @@
-export {};
+export {fileMiddleware} from "./interfaces/fileMiddleware";
