@@ -1,18 +1,18 @@
 import { Engine } from 'eviate';
 import event, { Emitter } from 'event-emitter';
 
-import { AppMetadataSchema } from './schema/AppMetadata';
+import { defaultAppMetadataValue } from './schema/AppMetadata';
 
-import type { AppMetadataInput, AppMetadataOutput } from './schema/AppMetadata';
+import type { AppMetadata } from './schema/AppMetadata';
 import type { PluginSettings } from './interfaces/plugin-settings';
 
 export abstract class Plugin {
   public readonly event: Emitter;
 
-  private metadata: AppMetadataOutput;
+  private metadata: AppMetadata;
 
-  constructor(metadata: AppMetadataInput) {
-    this.metadata = AppMetadataSchema.parse(metadata);
+  constructor(metadata: AppMetadata) {
+    this.metadata = { ...defaultAppMetadataValue, ...metadata };
 
     this.event = event();
   }
