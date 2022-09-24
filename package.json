@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "event-emitter": "^0.3.5",
-    "eviate": "^0.1.0-alpha.1",
+    "eviate": "^0.1.0-alpha.4",
     "gradient-string": "^2.0.2"
   },
   "devDependencies": {
