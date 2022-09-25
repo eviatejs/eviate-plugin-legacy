@@ -403,6 +403,49 @@ esbuild@^0.15.1:
     esbuild-windows-64 "0.15.9"
     esbuild-windows-arm64 "0.15.9"
 
+
+event-emitter@^0.3.5:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/event-emitter/-/event-emitter-0.3.5.tgz#df8c69eef1647923c7157b9ce83840610b02cc39"
+  integrity sha512-D9rRn9y7kLPnJ+hMq7S/nhvoKwwvVJahBi2BPmx3bvbsEdK3W9ii8cBSGjP+72/LnM4n6fo3+dkCX5FeTQruXA==
+  dependencies:
+    d "1"
+    es5-ext "~0.10.14"
+
+eviate-plugin@^0.1.0-alpha.10:
+  version "0.1.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/eviate-plugin/-/eviate-plugin-0.1.0-alpha.10.tgz#e005584412d22649d4f0bd6f385422bb6d06a1ce"
+  integrity sha512-DIyHl59VDc4xeODkIm+GLGORs7Q+aBHs/f+8ZOvBbw/gFejb9ec5sWkVLPCi6v3zHcTllcWJY/A+zy4p742QOA==
+  dependencies:
+    eviate "^0.1.0-alpha.8"
+
+eviate-plugin@^0.1.0-alpha.7:
+  version "0.1.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/eviate-plugin/-/eviate-plugin-0.1.0-alpha.9.tgz#418bb78f8ffe5fe9db7934b5ce069b9cacd4f0df"
+  integrity sha512-3jEYQblENj+4+uITkheEztDRokRTZd6p/t+mY1yHa4KRGdRoYyaaTrnlbnHbWxFG3W/oHpRh7NcVxTtph8/2tg==
+  dependencies:
+    event-emitter "^0.3.5"
+    eviate "^0.1.0-alpha.6"
+    gradient-string "^2.0.2"
+
+eviate@^0.1.0-alpha.6, eviate@^0.1.0-alpha.8:
+  version "0.1.0-alpha.8"
+  resolved "https://registry.yarnpkg.com/eviate/-/eviate-0.1.0-alpha.8.tgz#ae9971d2bbf615b1476e91ff8563108ddc38b907"
+  integrity sha512-q8wxhi6NIzibCOG1Flh5+Zk0m2wcYXB41ojy4kZyF8NZap3vA8mIcJQatpb12HUoLa5RUNkuP8qE4cHnGnxa1A==
+  dependencies:
+    eviate-plugin "^0.1.0-alpha.7"
+    picocolors "^1.0.0"
+    ws "^8.9.0"
+
+eviate@^0.1.0-alpha.9:
+  version "0.1.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/eviate/-/eviate-0.1.0-alpha.9.tgz#f104106127ff5f4d212f53b92c76597ce68fc3a7"
+  integrity sha512-F2FzVNd6J3C27xJd+/CIxymIhc5lfCCj+yYrLRONL8OCuLVTNiMv9GTYEadNjwFJejGn1tZ6yxswMLuna5t9jQ==
+  dependencies:
+    eviate-plugin "^0.1.0-alpha.10"
+    picocolors "^1.0.0"
+    ws "^8.9.0"
+
 execa@^5.0.0:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/execa/-/execa-5.1.1.tgz#f80ad9cbf4298f7bd1d4c9555c21e93741c411dd"

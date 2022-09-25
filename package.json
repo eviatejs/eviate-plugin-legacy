@@ -26,7 +26,10 @@
     "test": "bun wiptest",
     "prepare": "husky install"
   },
-  "dependencies": {},
+
+  "dependencies": {
+    "eviate": "^0.1.0-alpha.9"
+  },
   "devDependencies": {
     "bumpp": "^8.2.1",
     "bun-types": "^0.1.11",
