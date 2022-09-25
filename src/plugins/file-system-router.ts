@@ -33,7 +33,7 @@ export class FileSystemRouter extends Plugin {
     readdirSync(middlewarePath).forEach(async (file: string) => {
       const middleware = await import(`${middlewarePath}/${file}`);
 
-      app.use('start', middleware.middleware.run);
+      app.use(middleware.middleware.position, middleware.middleware.run);
     });
   }
 

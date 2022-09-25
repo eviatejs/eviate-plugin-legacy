@@ -1,6 +1,6 @@
 import type { handler } from 'eviate';
 
-export interface FileMiddleware {
+export interface FileRoute {
   method: string;
   run: handler;
 }
