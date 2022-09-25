@@ -9,6 +9,7 @@ import type { PluginSettings } from './interfaces/plugin-settings';
 type MiddlewarePositionKeys = keyof typeof MiddlewarePosition;
 type MiddlewarePositionValues =
   typeof MiddlewarePosition[MiddlewarePositionKeys];
+
 interface Route {
   route: string;
   method: string;
