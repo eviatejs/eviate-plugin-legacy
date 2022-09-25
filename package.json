@@ -26,6 +26,7 @@
     "test": "bun wiptest",
     "prepare": "husky install"
   },
+
   "dependencies": {
     "eviate": "^0.1.0-alpha.9"
   },
