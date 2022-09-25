@@ -72,6 +72,11 @@ export class FileSystemRouter extends Plugin {
     });
   }
 
+  public handler(app: Engine): void {
+    this.routesLog(app)
+    this.middlewares(app)
+  }
+
   public routesLog(app: Engine) {
     const routePath: string = path.join(process.cwd(), this.options.routerDir);
 
