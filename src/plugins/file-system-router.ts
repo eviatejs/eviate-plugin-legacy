@@ -1,7 +1,6 @@
 import { readdirSync, lstatSync } from 'fs';
 import path from 'path';
 
-import { Engine } from 'eviate';
 
 import { Plugin } from '../plugin';
 
@@ -25,7 +24,7 @@ export class FileSystemRouter extends Plugin {
     return {};
   }
 
-  public middlewares(app: Engine): void {
+  public middlewares(app: any): void {
     const middlewarePath: string = path.join(
       process.cwd(),
       this.options.middlewareDir
@@ -38,7 +37,7 @@ export class FileSystemRouter extends Plugin {
     });
   }
 
-  private async logFile(file: string, path: string, app: Engine) {
+  private async logFile(file: string, path: string, app: any) {
     if (file.endsWith('.js') || file.endsWith('.ts')) {
       const code = await import(`${path}/${file}`);
 
@@ -58,7 +57,7 @@ export class FileSystemRouter extends Plugin {
     }
   }
 
-  private logDir(file: string, app: Engine) {
+  private logDir(file: string, app: any) {
     readdirSync(file).forEach(async (dir: string) => {
       const dirFile = await lstatSync(`${file}/${dir}`);
 
@@ -72,12 +71,12 @@ export class FileSystemRouter extends Plugin {
     });
   }
 
-  public handler(app: Engine): void {
+  public handler(app: any): void {
     this.routesLog(app)
     this.middlewares(app)
   }
 
-  public routesLog(app: Engine) {
+  public routesLog(app: any) {
     const routePath: string = path.join(process.cwd(), this.options.routerDir);
 
     readdirSync(routePath).forEach(async (dir: string) => {

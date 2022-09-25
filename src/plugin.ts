@@ -1,5 +1,4 @@
-import { Engine, EventEmitter } from 'eviate';
-
+import { EventEmitter } from './utils/event-emitter';
 import { defaultAppMetadataValue } from './schema/AppMetadata';
 
 import type { AppMetadata } from './schema/AppMetadata';
@@ -20,7 +19,7 @@ export abstract class Plugin {
     return this._metadata;
   }
 
-  public abstract handler(app: Engine): void;
+  public abstract handler(app: any): void;
 
   abstract get settings(): PluginSettings;
 }
