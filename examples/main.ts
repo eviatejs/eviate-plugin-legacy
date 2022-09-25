@@ -10,7 +10,7 @@ const fileRouter = new FileSystemRouter({
 });
 
 fileRouter.middlewares(app);
-fileRouter.routes(app);
+fileRouter.routesLog(app);
 app.get('/', _ => {
   return {
     status: 200,
@@ -31,4 +31,4 @@ app.get('/:name', ctx => {
   };
 });
 
-app.listen({ port: 3000 });
+app.listen();

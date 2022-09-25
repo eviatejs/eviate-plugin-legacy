@@ -33,6 +33,9 @@ export abstract class Plugin {
   abstract middlewares(app: Engine): void;
 
   // Route decorator
+  public get pluginMetaData() : AppMetadata {
+    return this.metadata
+  }
   public route = (route: Route) => {
     return (target: Function) => {
       this._routes.push(route);

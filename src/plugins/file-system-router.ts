@@ -72,7 +72,7 @@ export class FileSystemRouter extends Plugin {
     });
   }
 
-  public routes(app: Engine) {
+  public routesLog(app: Engine) {
     const routePath: string = path.join(process.cwd(), this.options.routerDir);
 
     readdirSync(routePath).forEach(async (dir: string) => {
