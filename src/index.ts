@@ -1,3 +1,3 @@
 export * from './plugins';
 export * from './interfaces';
-export * from "./plugin"
+export * from './plugin';

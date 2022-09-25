@@ -1,7 +1,6 @@
 import { readdirSync, lstatSync } from 'fs';
 import path from 'path';
 
-
 import { Plugin } from '../plugin';
 
 import type { FileSystemMiddlewareInterface } from './interfaces/file-system-router';

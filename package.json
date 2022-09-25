@@ -1,6 +1,6 @@
 {
   "name": "eviate-plugin",
-  "version": "0.1.0-alpha.10",
+  "version": "0.1.0",
   "description": "Plugin system for EviateJS",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -16,7 +16,6 @@
     "dist"
   ],
   "scripts": {
-    "run": "bun run src/index.ts",
     "dev": "bun run examples/main.ts",
     "build": "tsup",
     "typecheck": "tsc --noEmit",
