@@ -32,7 +32,7 @@ export class FileSystemRouter extends Plugin {
     readdirSync(middlewarePath).forEach(async (file: string) => {
       const middleware = await import(`${middlewarePath}/${file}`);
 
-      app.use('start', middleware.middleware.run);
+      app.use(middleware.middleware.position, middleware.middleware.run);
     });
   }
 
@@ -50,9 +50,12 @@ export class FileSystemRouter extends Plugin {
       const rmPath = path
         .replace(process.cwd(), '')
         .replace(this.options.routerDir, '');
-      const routePath = rmPath + '/' + file.replace('.ts' || '.js', '');
+        let routePath: string = ""
+        
+        if(file.endsWith(".ts")) routePath = rmPath + '/' + file.replace('.ts', '');
+        if(file.endsWith(".js")) routePath = rmPath + '/' + file.replace('.js', '');
 
-      app.get(routePath, code.route.run);
+      app.register(code.route.method, routePath, code.route.run)
     }
   }
 
