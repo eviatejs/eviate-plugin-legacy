@@ -51,7 +51,10 @@ export class FileSystemRouter extends Plugin {
       const rmPath = path
         .replace(process.cwd(), '')
         .replace(this.options.routerDir, '');
-      const routePath = rmPath + '/' + file.replace('.ts' || '.js', '');
+        let routePath: string = ""
+        
+        if(file.endsWith(".ts")) routePath = rmPath + '/' + file.replace('.ts', '');
+        if(file.endsWith(".js")) routePath = rmPath + '/' + file.replace('.js', '');
 
       app.register(code.route.method, routePath, code.route.run)
     }
