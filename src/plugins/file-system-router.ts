@@ -53,7 +53,7 @@ export class FileSystemRouter extends Plugin {
         .replace(this.options.routerDir, '');
       const routePath = rmPath + '/' + file.replace('.ts' || '.js', '');
 
-      app.get(routePath, code.route.run);
+      app.register(code.route.method, routePath, code.route.run)
     }
   }
 

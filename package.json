@@ -27,7 +27,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "eviate": "^0.1.0-alpha.9"
+    "eviate": "^0.1.0-alpha.11"
   },
   "devDependencies": {
     "bumpp": "^8.2.1",
