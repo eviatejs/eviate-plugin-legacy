@@ -479,6 +479,15 @@ eviate-plugin@^0.1.0-alpha.6:
     eviate "^0.1.0-alpha.1"
     gradient-string "^2.0.2"
 
+eviate-plugin@^0.1.0-alpha.7:
+  version "0.1.0-alpha.7"
+  resolved "https://registry.yarnpkg.com/eviate-plugin/-/eviate-plugin-0.1.0-alpha.7.tgz#cf143eef83647854c30974ebcb94229cabbea7c5"
+  integrity sha512-v8Xg6aCORK08ebM4tEufwyQ3wsDSeyOG1gYfZ49lsS2FDkKf1QVgM7dTbDRbXWqsxyVzeUWISuY7wCmdZ6ORSg==
+  dependencies:
+    event-emitter "^0.3.5"
+    eviate "^0.1.0-alpha.4"
+    gradient-string "^2.0.2"
+
 eviate@^0.1.0-alpha.1, eviate@^0.1.0-alpha.4:
   version "0.1.0-alpha.4"
   resolved "https://registry.yarnpkg.com/eviate/-/eviate-0.1.0-alpha.4.tgz#d7cd88449ad9292cee0fc03a396f1aa836b7a4a6"
@@ -487,6 +496,15 @@ eviate@^0.1.0-alpha.1, eviate@^0.1.0-alpha.4:
     event-emitter "^0.3.5"
     eviate-plugin "^0.1.0-alpha.6"
     picocolors "^1.0.0"
+
+eviate@^0.1.0-alpha.6:
+  version "0.1.0-alpha.6"
+  resolved "https://registry.yarnpkg.com/eviate/-/eviate-0.1.0-alpha.6.tgz#b7c527b0656444579e0df0a3d2723dd349a20896"
+  integrity sha512-+2+VI4RuZ2QJKxRUo+qmtF7vWvTv9cs3UfnZgMuWWp/AwoP18HbeC3qmlk9qPMhp8Kkhfj5ivlQfm2IXRcjd+A==
+  dependencies:
+    eviate-plugin "^0.1.0-alpha.7"
+    picocolors "^1.0.0"
+    ws "^8.9.0"
 
 execa@^5.0.0:
   version "5.1.1"
@@ -1301,6 +1319,11 @@ wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==
+
+ws@^8.9.0:
+  version "8.9.0"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-8.9.0.tgz#2a994bb67144be1b53fe2d23c53c028adeb7f45e"
+  integrity sha512-Ja7nszREasGaYUYCI2k4lCKIRTt+y7XuqVoHR44YpI49TtryyqbqvDMn5eqfW7e6HzTukDRIsXqzVHScqRcafg==
 
 yallist@^4.0.0:
   version "4.0.0"
