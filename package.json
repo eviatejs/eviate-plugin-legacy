@@ -1,6 +1,6 @@
 {
   "name": "eviate-plugin",
-  "version": "0.1.0-alpha.10",
+  "version": "0.1.0-alpha.11",
   "description": "Plugin system for EviateJS",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -26,7 +26,6 @@
     "test": "bun wiptest",
     "prepare": "husky install"
   },
-
   "dependencies": {
     "eviate": "^0.1.0-alpha.9"
   },
