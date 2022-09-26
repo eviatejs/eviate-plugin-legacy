@@ -1,4 +1,5 @@
-import { EventEmitter } from './utils/event-emitter';
+import { EventEmitter } from 'sweet-event-emitter';
+
 import { defaultAppMetadataValue } from './schema/AppMetadata';
 
 import type { AppMetadata } from './schema/AppMetadata';

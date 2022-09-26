@@ -20,17 +20,16 @@
     "build": "tsup",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write ./**/*.{ts,json,md}",
-    "release": "bumpp --commit --push --tag && npm publish",
-    "prepublishOnly": "bun run build",
     "test": "bun wiptest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prepublishOnly": "bun run build"
   },
   "dependencies": {
-    "eviate": "^0.1.0-alpha.11"
+    "sweet-event-emitter": "^0.1.0"
   },
   "devDependencies": {
-    "bumpp": "^8.2.1",
     "bun-types": "^0.1.11",
+    "eviate": "^0.1.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
